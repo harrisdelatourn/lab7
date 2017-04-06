@@ -342,9 +342,30 @@ Exercise 3A: Implement the square_rect class which inherits all of its
 methods from its parent.
 ......................................................................*)
 
-(* UNCOMMENT ME AND COMPLETE
-class square_rect (p : point) (s : float) : shape = ...
- *)
+
+class square_rect (p : point) (s : float) : shape =
+
+  method area : float =
+    failwith "rect area method not implemented"
+
+  method bounding_box : point * point =
+    failwith "rect bounding_box method not implemented"
+
+  method center : point =
+    failwith "rect center method not implemented"
+
+  (* Destructively update pos to translate the shape by the values
+     given in t. *)
+  method translate (t : point) : unit =
+    failwith "rect translate method not implemented"
+
+  (* Scale the width and height of a rectangle from the lower-
+     left corner. *)
+  method scale (k : float) : unit =
+    failwith "rect scale method not implemented"
+
+end ;;
+   
 
 (*......................................................................
 Exercise 3B: Now, implement a square_center_scale class that inherits
