@@ -344,7 +344,7 @@ methods from its parent.
 
 
 class square_rect (p : point) (s : float) : shape =
-
+object(this)
   method area : float =
     failwith "rect area method not implemented"
 
