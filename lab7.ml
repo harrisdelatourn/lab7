@@ -56,8 +56,14 @@ Exercise 1A: Given the definitions above, write a function area_adt
 that accepts a shape_adt and returns a float representing the area of
 the shape.
 ....................................................................*)
+let pi = 4.0 *. atan 1.0 ;;
+
 let area_adt (s : shape_adt) : float =
-  failwith "area_adt not implemented" ;;
+	match s with
+	| Square (_p, e) -> e ** 2. 
+	| Rect (_p, w, h) -> w *. h
+	| Circle (_p, r) ->  pi *. r ** 2.
+;;
 
 (*....................................................................
 Exercise 1B: Write a function that, given a list of elements of type
